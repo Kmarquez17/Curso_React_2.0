@@ -1,10 +1,13 @@
 import React from 'react';
-
 import './Styles/Badge.css';
 import confLogo from '../images/badge-header.svg';
 
+import Gravatar from '../components/Gravatar';
+
 class Badge extends React.Component {
 	render() {
+		const { firstName, lastName, email, jobTitle, twitter } = this.props.formValues;
+
 		return (
 			<div className="Badge">
 				<div className="Badge__header">
@@ -12,15 +15,15 @@ class Badge extends React.Component {
 				</div>
 
 				<div className="Badge__section-name">
-					<img className="Badge__avatar" src="https://www.gravatar.com/avatar?d=identicon" alt="Avatar" />
+					<Gravatar className="Badge__avatar" email={email} />
 					<h1>
-						{this.props.formValues.firtsName} <br /> {this.props.formValues.lastName}{' '}
+						{firstName} <br /> {lastName}
 					</h1>
 				</div>
 
 				<div className="Badge__section-info">
-					<h3>{this.props.formValues.jobTitle}</h3>
-					<div>@{this.props.formValues.twitter}</div>
+					<h3>{jobTitle}</h3>
+					<div>@{twitter}</div>
 				</div>
 
 				<div className="Badge__footer ">#platziconf</div>

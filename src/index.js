@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/App'
+// import App from './RickMorty/index'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './global.css'
