@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Styles/BadgeNew.css';
+import './Styles/BadgeEdit.css';
 
 import header from '../images/badge-header.svg';
 
@@ -9,7 +9,7 @@ import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
 
-class BadgeNew extends Component {
+class BadgeEdit extends Component {
 	state = {
 		form: {
 			firstName: '',
@@ -19,8 +19,30 @@ class BadgeNew extends Component {
 			twitter: '',
 			avatarUrl: '',
 		},
-		loading: false,
+		loading: true,
 		error: null,
+	};
+
+	componentDidMount() {
+		this.fetchData();
+	}
+
+	fetchData = async e => {
+		this.setState({ loading: true, error: null });
+
+		try {
+			const data = await api.badges.read(this.props.match.params.badgeId);
+
+			this.setState({
+				loading: false,
+				form: data,
+			});
+		} catch (error) {
+			this.setState({
+				loading: false,
+				error: error,
+			});
+		}
 	};
 
 	handleChange = e => {
@@ -43,7 +65,7 @@ class BadgeNew extends Component {
 			error: null,
 		});
 		try {
-			await api.badges.create(this.state.form);
+			await api.badges.update(this.props.match.params.badgeId, this.state.form);
 			this.setState({
 				loading: false,
 			});
@@ -62,8 +84,8 @@ class BadgeNew extends Component {
 		}
 		return (
 			<React.Fragment>
-				<div className="BadgeNew__hero">
-					<img src={header} alt="" className="BadgeNew__hero-image img-fluid" />
+				<div className="BadgeEdit__hero">
+					<img src={header} alt="" className="BadgeEdit__hero-image img-fluid" />
 				</div>
 				<div className="container">
 					<div className="row">
@@ -71,7 +93,7 @@ class BadgeNew extends Component {
 							<Badge formValues={this.state.form} />
 						</div>
 						<div className="col-6">
-							<h1> New Attendant </h1>
+							<h1> Edit Attendant </h1>
 							<BadgeForm
 								handleChange={this.handleChange}
 								formValues={this.state.form}
@@ -86,4 +108,4 @@ class BadgeNew extends Component {
 	}
 }
 
-export default BadgeNew;
+export default BadgeEdit;

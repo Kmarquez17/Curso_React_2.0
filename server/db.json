@@ -5,7 +5,7 @@
       "firstName": "Nova",
       "lastName": "Bergstrom",
       "email": "Darrell10@gmail.com",
-      "jobTitle": "Lead Interactions Officer",
+      "jobTitle": "Lead Interactions Officera",
       "twitter": "NovaBergstrom48167"
     },
     {
@@ -18,52 +18,11 @@
     },
     {
       "id": "nLpNW6A",
-      "firstName": "Kevin",
-      "lastName": "Alberto",
-      "email": "marquezkrodriguez24@gmail.com",
+      "firstName": "Kevin Alberto",
+      "lastName": "Marquez Rodriguez",
+      "email": "kmarquez@thedataage.com",
       "jobTitle": "Frontend",
       "twitter": "K_Marquez17"
-    },
-    {
-      "firstName": "Kevin",
-      "lastName": "Alberto",
-      "email": "marquezkrodriguez24@gmail.com",
-      "jobTitle": "Frontend",
-      "twitter": "K_Marquez17",
-      "id": "JNj8MAh"
-    },
-    {
-      "firstName": "Kevin",
-      "lastName": "Alberto",
-      "email": "marquezkrodriguez24@gmail.com",
-      "jobTitle": "Frontend",
-      "twitter": "K_Marquez17",
-      "id": "iznMDqA"
-    },
-    {
-      "firstName": "Kevin",
-      "lastName": "Alberto",
-      "email": "marquezkrodriguez24@gmail.com",
-      "jobTitle": "Frontend",
-      "twitter": "K_Marquez17",
-      "id": "uSiQho0"
-    },
-    {
-      "firstName": "Alex",
-      "lastName": "Marenco",
-      "email": "alex@gmial.com",
-      "jobTitle": "movil developer",
-      "twitter": "alex_",
-      "id": "XM1xHWP"
-    },
-    {
-      "firstName": "Kevin",
-      "lastName": "Alberto",
-      "email": "marquezrodriguezk@yahoo.com",
-      "jobTitle": "Frontend",
-      "twitter": "K_Marquez17",
-      "avatarUrl": "",
-      "id": "5TU-Go8"
     }
   ]
 }
